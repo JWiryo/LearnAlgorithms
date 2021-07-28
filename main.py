@@ -47,9 +47,29 @@ def selectionSortAlt(arr):
     
   return arr
 
+## Insertion Sort
+#Time Complexity = O(n^2) [Best case is O(n) if list already almost sorted]
+#Space Complexity = O(1)
+
+### Personal Implementation
+def insertionSort(arr):
+
+  length = len(arr)
+  for i in range(1, length):
+    
+    curValue = arr[i]
+    j = i - 1
+    while j >= 0 and arr[j] >= curValue:
+      arr[j+1] = arr[j]
+      j -= 1
+    arr[j+1] = curValue
+  
+  return arr
+
 ### Test Codes Here
 # print(bubbleSort(numbers))
-print(selectionSort(numbers))
+# print(selectionSort(numbers))
+print(insertionSort(numbers))
 
 
 
