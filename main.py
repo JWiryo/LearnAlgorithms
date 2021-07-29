@@ -66,10 +66,58 @@ def insertionSort(arr):
   
   return arr
 
+## Merge Sort
+#Time Complexity = O(nlogn)
+#Space Complexity = O(n)
+
+### Implementation based on Udemy course by Andrei Neagoie & Yihua Zhang
+def mergeSort(arr):
+
+  # Base Case
+  length = len(arr)
+  if length == 1:
+    return arr
+  
+  # Divide Array into 2-halves
+  half = length // 2
+  left = arr[:half]
+  right = arr[half:]
+  
+  # Recursive Case
+  return merge(mergeSort(left), mergeSort(right))
+
+def merge(left, right):
+
+  temp = []
+  i = 0
+  j = 0
+
+  # Comparison Case
+  while i < len(left) and j < len(right):
+    if left[i] <= right[j]:
+      temp.append(left[i])
+      i += 1
+    else:
+      temp.append(right[j])
+      j += 1
+
+  # Remaining Left case
+  while i < len(left):
+    temp.append(left[i])
+    i += 1
+  
+  # Remaining Right case
+  while j < len(right):
+    temp.append(right[j])
+    j += 1
+
+  return temp
+
 ### Test Codes Here
 # print(bubbleSort(numbers))
 # print(selectionSort(numbers))
-print(insertionSort(numbers))
+# print(insertionSort(numbers))
+print(mergeSort(numbers))
 
 
 
