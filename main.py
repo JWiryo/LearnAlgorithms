@@ -113,11 +113,48 @@ def merge(left, right):
 
   return temp
 
+## Merge Sort
+#Time Complexity = O(n^2) but O(nlogn) on average
+#Space Complexity = O(n)
+
+### Implementation based on Udemy course by Andrei Neagoie & Yihua Zhang
+def quickSort(arr, left, right):
+
+  # Base Case
+  length = len(arr)
+  if length < 2:
+    return arr
+
+  if left < right:
+    # Get partition
+    partitionIdx = partition(arr, left, right)
+
+    # Perform Quick Sort
+    quickSort(arr, left, partitionIdx - 1)
+    quickSort(arr, partitionIdx + 1, right)
+  
+  return arr
+
+def partition(arr, left = 0, right = None):
+
+  partitionIdx = left
+  pivotIdx = right
+
+  for j in range(left, right):
+    if arr[j] <= arr[pivotIdx]:
+      arr[j], arr[partitionIdx] = arr[partitionIdx], arr[j]
+      partitionIdx += 1
+  arr[partitionIdx], arr[pivotIdx] = arr[pivotIdx], arr[partitionIdx]
+
+  return partitionIdx
+      
+
 ### Test Codes Here
 # print(bubbleSort(numbers))
 # print(selectionSort(numbers))
 # print(insertionSort(numbers))
-print(mergeSort(numbers))
+# print(mergeSort(numbers))
+print(quickSort(numbers, 0, len(numbers)-1))
 
 
 
