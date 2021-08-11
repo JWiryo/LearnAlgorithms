@@ -1,6 +1,6 @@
 numbers = [99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0, -1, -3]
 
-### Implementation Here
+### Sorting Implementation Here
 
 ## Bubble Sort
 #Time Complexity = O(n^2)
@@ -154,7 +154,27 @@ def partition(arr, left = 0, right = None):
 # print(selectionSort(numbers))
 # print(insertionSort(numbers))
 # print(mergeSort(numbers))
-print(quickSort(numbers, 0, len(numbers)-1))
+# print(quickSort(numbers, 0, len(numbers)-1))
 
+### Binary Search Implementation Here
 
+def binarySearch(arr, target):
 
+  left = 0
+  right = len(arr) - 1
+
+  while left <= right:
+    mid = (left + right) // 2
+    foundVal = arr[mid]
+
+    if foundVal == target:
+      return mid
+    elif foundVal < target:
+      left = mid + 1
+    else:
+      right = mid - 1
+    
+  return -1
+
+### Test Codes Here
+print(binarySearch(mergeSort(numbers), 4))
