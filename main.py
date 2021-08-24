@@ -34,4 +34,6 @@ matrix = [
 
 ### Test Matrix Traversal Here
 mt = mt.MatrixTraversal()
-print(mt.arrDFS(matrix))
+# print(mt.arrDFS(matrix))
+print(mt.arrBFS(matrix))
+print(mt.personalArrBFS(matrix))
