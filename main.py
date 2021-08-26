@@ -65,5 +65,7 @@ adjacencyMatrix = [
 
 ### Test Graph Traversal Here
 gt = gt.GraphTraversal()
-print(gt.adjListBFS(adjacencyList))
-print(gt.adjMatrixBFS(adjacencyMatrix))
+# print(gt.adjListBFS(adjacencyList))
+# print(gt.adjMatrixBFS(adjacencyMatrix))
+print(gt.adjListDFS(adjacencyList))
+print(gt.adjMatrixDFS(adjacencyMatrix))
