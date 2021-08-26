@@ -1,6 +1,7 @@
 import Sorting
 import PriorityQueue as pq
 import MatrixTraversal as mt
+import GraphTraversal as gt
 
 numbers = [99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0, -1, -3]
 matrix = [
@@ -8,6 +9,30 @@ matrix = [
   [6, 7, 8, 9, 10],
   [11, 12, 13, 14, 15],
   [16, 17, 18, 19, 20]
+];
+
+adjacencyList = [
+  [1, 3],
+  [0],
+  [3, 8],
+  [0, 2, 4, 5],
+  [3, 6],
+  [3],
+  [4, 7],
+  [6],
+  [2]
+];
+
+adjacencyMatrix = [
+  [0, 1, 0, 1, 0, 0, 0, 0, 0],
+  [1, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 1, 0, 0, 0, 0, 1],
+  [1, 0, 1, 0, 1, 1, 0, 0, 0],
+  [0, 0, 0, 1, 0, 0, 1, 0, 0],
+  [0, 0, 0, 1, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 1, 0, 0, 1, 0],
+  [0, 0, 0, 0, 0, 0, 1, 0, 0],
+  [0, 0, 1, 0, 0, 0, 0, 0, 0]
 ];
 
 ### Test Sorting Codes Here
@@ -33,7 +58,12 @@ matrix = [
 # print(pq.printQueue())
 
 ### Test Matrix Traversal Here
-mt = mt.MatrixTraversal()
+# mt = mt.MatrixTraversal()
 # print(mt.arrDFS(matrix))
-print(mt.arrBFS(matrix))
-print(mt.personalArrBFS(matrix))
+# print(mt.arrBFS(matrix))
+# print(mt.personalArrBFS(matrix))
+
+### Test Graph Traversal Here
+gt = gt.GraphTraversal()
+print(gt.adjListBFS(adjacencyList))
+print(gt.adjMatrixBFS(adjacencyMatrix))
