@@ -2,6 +2,7 @@ import Sorting
 import PriorityQueue as pq
 import MatrixTraversal as mt
 import GraphTraversal as gt
+import TopologicalSort as ts
 
 numbers = [99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0, -1, -3]
 matrix = [
@@ -64,8 +65,12 @@ adjacencyMatrix = [
 # print(mt.personalArrBFS(matrix))
 
 ### Test Graph Traversal Here
-gt = gt.GraphTraversal()
+# gt = gt.GraphTraversal()
 # print(gt.adjListBFS(adjacencyList))
 # print(gt.adjMatrixBFS(adjacencyMatrix))
-print(gt.adjListDFS(adjacencyList))
-print(gt.adjMatrixDFS(adjacencyMatrix))
+# print(gt.adjListDFS(adjacencyList))
+# print(gt.adjMatrixDFS(adjacencyMatrix))
+
+### Test Topological Sort Here
+ts = ts.TopologicalSort()
+print(ts.checkCycleTopologicalSort(adjacencyList))
