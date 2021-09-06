@@ -3,6 +3,7 @@ import PriorityQueue as pq
 import MatrixTraversal as mt
 import GraphTraversal as gt
 import TopologicalSort as ts
+import Dijkstra as ds
 
 numbers = [99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0, -1, -3]
 matrix = [
@@ -35,6 +36,13 @@ adjacencyMatrix = [
   [0, 0, 0, 0, 0, 0, 1, 0, 0],
   [0, 0, 1, 0, 0, 0, 0, 0, 0]
 ];
+
+dijkstraGraph = [
+  [0,1,1], 
+  [1,2,1],
+  [2,3,1]
+]
+dijkstraN = 4
 
 ### Test Sorting Codes Here
 # print(Sorting.bubbleSort(numbers))
@@ -72,5 +80,10 @@ adjacencyMatrix = [
 # print(gt.adjMatrixDFS(adjacencyMatrix))
 
 ### Test Topological Sort Here
-ts = ts.TopologicalSort()
-print(ts.checkCycleTopologicalSort(adjacencyList))
+# ts = ts.TopologicalSort()
+# print(ts.checkCycleTopologicalSort(adjacencyList))
+
+
+### Test Dijkstra Here
+ds = ds.Dijkstra(dijkstraN)
+print(ds.dijkstra(dijkstraGraph, dijkstraN, 1))
