@@ -4,6 +4,7 @@ import MatrixTraversal as mt
 import GraphTraversal as gt
 import TopologicalSort as ts
 import Dijkstra as ds
+import BellmanFord as bf
 
 numbers = [99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0, -1, -3]
 matrix = [
@@ -85,5 +86,9 @@ dijkstraN = 4
 
 
 ### Test Dijkstra Here
-ds = ds.Dijkstra(dijkstraN)
-print(ds.dijkstra(dijkstraGraph, dijkstraN, 1))
+# ds = ds.Dijkstra(dijkstraN)
+# print(ds.dijkstra(dijkstraGraph, dijkstraN, 1))
+
+### Test BellmanFord Here
+bf = bf.BellmanFord()
+print(bf.BellmanFord(dijkstraGraph, dijkstraN, 0))
