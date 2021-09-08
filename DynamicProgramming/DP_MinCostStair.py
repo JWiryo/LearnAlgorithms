@@ -21,3 +21,29 @@ class MinCostStair:
       return cost[idx] + min(minCost(idx-1), minCost(idx-2))
           
     return min(minCost(length-1), minCost(length-2))
+  
+# Dynamic Programming (Top-Down Memoized Recursive)
+# Time Complexity: O(N) -> Only need to compute recursive case once
+# Space Complexity: O(N) -> Maximum call stack is only a single branch down to the bottom of the binary tree
+
+  def memoizedMinCostClimbingStairs(self, cost) -> int:
+          
+    length = len(cost)
+    
+    # Initialize Memoization dictionary
+    memo = {}
+    
+    def minCost(idx):
+        
+        if idx < 0:
+            return 0
+        elif idx == 0 or idx == 1:
+            return cost[idx]
+        elif idx in memo:
+            # Return Memoized Result
+            return memo[idx]
+        
+        memo[idx] = cost[idx] + min(minCost(idx-1), minCost(idx-2))
+        return memo[idx]
+          
+    return min(minCost(length-1), minCost(length-2))

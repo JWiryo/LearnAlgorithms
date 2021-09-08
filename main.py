@@ -105,4 +105,5 @@ stairCost = [1,100,1,1,1,100,1,1,100,1]
 
 ### Test DP-MinCostStairHere
 mcs = mcs.MinCostStair()
-print(mcs.bruteForceMinCostClimbingStairs(stairCost))
+# print(mcs.bruteForceMinCostClimbingStairs(stairCost))
+print(mcs.memoizedMinCostClimbingStairs(stairCost))
