@@ -7,6 +7,7 @@ import Dijkstra as ds
 import BellmanFord as bf
 
 import DynamicProgramming.DP_MinCostStair as mcs
+import DynamicProgramming.DP_ClimbStair as cs
 
 numbers = [99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0, -1, -3]
 matrix = [
@@ -102,8 +103,13 @@ dijkstraN = 4
 
 # Test Variables
 stairCost = [1,100,1,1,1,100,1,1,100,1]
+stairN = 45
 
-### Test DP-MinCostStairHere
+### Test DP-MinCostStair Here
 mcs = mcs.MinCostStair()
 # print(mcs.bruteForceMinCostClimbingStairs(stairCost))
 print(mcs.memoizedMinCostClimbingStairs(stairCost))
+
+### Test DP-ClimbStair Here
+cs = cs.ClimbStair()
+print(cs.climbStairs(stairN))
