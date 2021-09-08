@@ -111,7 +111,7 @@ def merge(left, right):
 
   return temp
 
-## Merge Sort
+## Quick Sort
 #Time Complexity = O(n^2) but O(nlogn) on average
 #Space Complexity = O(n)
 
