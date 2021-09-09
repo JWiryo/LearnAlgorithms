@@ -108,8 +108,10 @@ stairN = 45
 ### Test DP-MinCostStair Here
 mcs = mcs.MinCostStair()
 # print(mcs.bruteForceMinCostClimbingStairs(stairCost))
-print(mcs.memoizedMinCostClimbingStairs(stairCost))
+# print(mcs.memoizedMinCostClimbingStairs(stairCost))
+# print(mcs.bottomUpMinCostClimbingStairs(stairCost))
+print(mcs.bottomUpOptimizedMinCostClimbingStairs(stairCost))
 
 ### Test DP-ClimbStair Here
-cs = cs.ClimbStair()
-print(cs.climbStairs(stairN))
+# cs = cs.ClimbStair()
+# print(cs.climbStairs(stairN))

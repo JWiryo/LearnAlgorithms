@@ -66,3 +66,24 @@ class MinCostStair:
         memo[i] = cost[i] + min(memo[i-1], memo[i-2])
     
     return min(memo[length-1], memo[length-2])
+  
+# Dynamic Programming (Bottom-Up Iterative)
+# Time Complexity: O(N) 
+# Space Complexity: O(1) - Only save last 2 variables instead of a whole scaling table
+
+  def bottomUpOptimizedMinCostClimbingStairs(self, cost) -> int:
+
+    length = len(cost)
+        
+    # Initialize Memoization dictionary
+    memo = {}
+    
+    memo[0] = cost[0]
+    memo[1] = cost[1]
+    
+    for i in range(2, length):
+        memo[i] = cost[i] + min(memo[i-1], memo[i-2])
+    
+    return min(memo[length-1], memo[length-2])
+
+    
