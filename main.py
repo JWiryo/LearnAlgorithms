@@ -6,6 +6,9 @@ import TopologicalSort as ts
 import Dijkstra as ds
 import BellmanFord as bf
 
+import DynamicProgramming.DP_MinCostStair as mcs
+import DynamicProgramming.DP_ClimbStair as cs
+
 numbers = [99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0, -1, -3]
 matrix = [
   [1, 2, 3, 4, 5],
@@ -90,5 +93,25 @@ dijkstraN = 4
 # print(ds.dijkstra(dijkstraGraph, dijkstraN, 1))
 
 ### Test BellmanFord Here
-bf = bf.BellmanFord()
-print(bf.BellmanFord(dijkstraGraph, dijkstraN, 0))
+# bf = bf.BellmanFord()
+# print(bf.BellmanFord(dijkstraGraph, dijkstraN, 0))
+
+
+####################################################
+###################### DP ##########################
+####################################################
+
+# Test Variables
+stairCost = [1,100,1,1,1,100,1,1,100,1]
+stairN = 45
+
+### Test DP-MinCostStair Here
+mcs = mcs.MinCostStair()
+# print(mcs.bruteForceMinCostClimbingStairs(stairCost))
+# print(mcs.memoizedMinCostClimbingStairs(stairCost))
+# print(mcs.bottomUpMinCostClimbingStairs(stairCost))
+print(mcs.bottomUpOptimizedMinCostClimbingStairs(stairCost))
+
+### Test DP-ClimbStair Here
+# cs = cs.ClimbStair()
+# print(cs.climbStairs(stairN))
