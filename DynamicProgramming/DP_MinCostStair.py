@@ -47,3 +47,22 @@ class MinCostStair:
         return memo[idx]
           
     return min(minCost(length-1), minCost(length-2))
+
+# Dynamic Programming (Bottom-Up Iterative)
+# Time Complexity: O(N) 
+# Space Complexity: O(N) 
+
+  def bottomUpMinCostClimbingStairs(self, cost) -> int:
+
+    length = len(cost)
+        
+    # Initialize Memoization dictionary
+    memo = {}
+    
+    memo[0] = cost[0]
+    memo[1] = cost[1]
+    
+    for i in range(2, length):
+        memo[i] = cost[i] + min(memo[i-1], memo[i-2])
+    
+    return min(memo[length-1], memo[length-2])
