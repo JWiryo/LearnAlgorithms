@@ -9,6 +9,7 @@ import BellmanFord as bf
 import DynamicProgramming.DP_MinCostStair as mcs
 import DynamicProgramming.DP_ClimbStair as cs
 import DynamicProgramming.DP_KnightChessboard as kc
+import DynamicProgramming.DP_BuySellStocks as bss
 
 numbers = [99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0, -1, -3]
 matrix = [
@@ -118,8 +119,14 @@ stairN = 45
 # print(cs.climbStairs(stairN))
 
 ### Test DP-KnightChessboard Here
-kc = kc.KnightChess()
-print(kc.bruteForceKnightProbability(3,2,0,0))
-print(kc.memoizedKnightProbability(8,30,0,0))
-print(kc.bottomUpKnightProbability(8,30,0,0))
-print(kc.bottomUpOptimizedknightProbability(8,30,0,0))
+# kc = kc.KnightChess()
+# print(kc.bruteForceKnightProbability(3,2,0,0))
+# print(kc.memoizedKnightProbability(8,30,0,0))
+# print(kc.bottomUpKnightProbability(8,30,0,0))
+# print(kc.bottomUpOptimizedknightProbability(8,30,0,0))
+
+### Test DP-BuySellStocks Here
+stockPrices = [7,1,5,3,6,4]
+bss = bss.BuySellStocks()
+print(bss.bruteForceMaxProfit(stockPrices))
+print(bss.kadaneMaxProfit(stockPrices))
