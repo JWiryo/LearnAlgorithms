@@ -148,4 +148,59 @@ class KnightChess:
       
       return result
       
+  # Dynamic Programming (Bottom-Up Memoized Optimized)
+  # Time Complexity: O(K*N^2)
+  # Space Complexity: O(2*N^2) -> Only save 2 grids
+  
+  def bottomUpOptimizedknightProbability(self, n: int, k: int, row: int, column: int) -> float:
+        
+    # Clockwise, Up Right Down Left
+    moves = [
+        [-2,1],
+        [-1,2],
+        [1,2],
+        [2,1],
+        [2,-1],
+        [1,-2],
+        [-1,-2],
+        [-2,-1]
+    ]
+    
+    if k == 0:
+        return 1
+    elif n < 3:
+        return 0
+    
+    # Initialize DP Grids
+    prevMemo = [[0 for j in range(n)] for i in range(n)]
+    curMemo = [[0 for j in range(n)] for i in range(n)]
+    
+    # Initialize 1st value at k = 0
+    prevMemo[row][column] = 1
+    
+    # Iterate through each element in the matrix at each step at every direction and build up DP Table
+    for step in range(1, k+1):
+        for r in range(n):
+            for c in range(n):
+                for direction in moves:
 
+                    prevRow = r + direction[0]
+                    prevCol = c + direction[1]
+                    
+                    #  Check Boundaries
+                    if prevRow >= 0 and prevRow < n and prevCol >= 0 and prevCol < n:
+                        
+                        curMemo[r][c] += prevMemo[prevRow][prevCol] / 8
+        
+        prevMemo = curMemo
+        curMemo = [[0 for j in range(n)] for i in range(n)]
+    
+    result = 0
+    
+    # Sum up result of all element in last table
+    for i in range(n):
+        for j in range(n):
+            
+            result += prevMemo[i][j]
+    
+    return result
