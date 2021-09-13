@@ -120,3 +120,4 @@ stairN = 45
 ### Test DP-KnightChessboard Here
 kc = kc.KnightChess()
 print(kc.bruteForceKnightProbability(3,2,0,0))
+print(kc.memoizedKnightProbability(8,30,0,0))
