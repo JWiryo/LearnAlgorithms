@@ -8,6 +8,7 @@ import BellmanFord as bf
 
 import DynamicProgramming.DP_MinCostStair as mcs
 import DynamicProgramming.DP_ClimbStair as cs
+import DynamicProgramming.DP_KnightChessboard as kc
 
 numbers = [99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0, -1, -3]
 matrix = [
@@ -106,12 +107,16 @@ stairCost = [1,100,1,1,1,100,1,1,100,1]
 stairN = 45
 
 ### Test DP-MinCostStair Here
-mcs = mcs.MinCostStair()
+# mcs = mcs.MinCostStair()
 # print(mcs.bruteForceMinCostClimbingStairs(stairCost))
 # print(mcs.memoizedMinCostClimbingStairs(stairCost))
 # print(mcs.bottomUpMinCostClimbingStairs(stairCost))
-print(mcs.bottomUpOptimizedMinCostClimbingStairs(stairCost))
+# print(mcs.bottomUpOptimizedMinCostClimbingStairs(stairCost))
 
 ### Test DP-ClimbStair Here
 # cs = cs.ClimbStair()
 # print(cs.climbStairs(stairN))
+
+### Test DP-KnightChessboard Here
+kc = kc.KnightChess()
+print(kc.bruteForceKnightProbability(3,2,0,0))
