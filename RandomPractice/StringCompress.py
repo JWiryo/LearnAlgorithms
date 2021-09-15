@@ -12,7 +12,7 @@
 
 class Solution:
 
-  def StringCompress(listString):
+  def StringCompress(self, listString):
 
     map = {}
 
@@ -20,17 +20,18 @@ class Solution:
 
       if character in map:
         map[character] += 1
-
-      map[character] = 0
+      else:
+        map[character] = 1
     
 
     output = []
-    for character, count in map.enumerate():
-
+    for character, count in map.items():
+      
+      print(character, count)
       output.append(character)
 
       if count > 1:
-        output.append(count)
+        output.append(str(count))
       
     
     return "".join(output)

@@ -142,4 +142,4 @@ stockPrices = [7,1,5,3,6,4]
 # print(ss.solveSudoku(board))
 
 sc = sc.Solution()
-sc.StringCompress(["a","a","b","b","c","c","c"])
+print(sc.StringCompress(["a","a","b","b","c","c","c"]))
