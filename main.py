@@ -13,6 +13,8 @@ import DynamicProgramming.DP_BuySellStocks as bss
 
 import Backtracking.SudokuSolver as ss
 
+import InterfaceDesign.Monarchy as monarchy
+
 numbers = [99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0, -1, -3]
 matrix = [
   [1, 2, 3, 4, 5],
@@ -60,7 +62,7 @@ dutchFlagProblem = [2,0,2,1,1,0,2,0,2,1,1,0,2,0,2,1,1,0,2,0,2,1,1,0]
 # print(Sorting.insertionSort(numbers))
 # print(Sorting.mergeSort(numbers))
 # print(Sorting.quickSort(numbers, 0, len(numbers)-1))
-print(Sorting.threeWaySort(dutchFlagProblem, 1))
+# print(Sorting.threeWaySort(dutchFlagProblem, 1))
 
 ### Test Binary Search Here
 # print(Sorting.binarySearch(Sorting.mergeSort(numbers), 4))
@@ -139,5 +141,21 @@ stockPrices = [7,1,5,3,6,4]
 ### Test Backtracking-SudokuSolver Here
 board = [["5","3",".",".","7",".",".",".","."],["6",".",".","1","9","5",".",".","."],[".","9","8",".",".",".",".","6","."],["8",".",".",".","6",".",".",".","3"],["4",".",".","8",".","3",".",".","1"],["7",".",".",".","2",".",".",".","6"],[".","6",".",".",".",".","2","8","."],[".",".",".","4","1","9",".",".","5"],[".",".",".",".","8",".",".","7","9"]]
 
-ss = ss.SudokuSolver()
-print(ss.solveSudoku(board))
+# ss = ss.SudokuSolver()
+# print(ss.solveSudoku(board))
+
+####################################################
+############### Interface Design ###################
+####################################################
+mon = monarchy.Monarchy("Jake")
+mon.birth('Catherine', 'Jake');
+mon.birth('Tom', 'Jake');
+mon.birth('Celine', 'Jake');
+mon.birth('Peter', 'Celine');
+mon.birth('Jane', 'Catherine');
+mon.birth('Farah', 'Jane');
+mon.birth('Mark', 'Catherine');
+mon.death("Jake")
+mon.death("Mark")
+
+print(mon.orderOfSuccession())
