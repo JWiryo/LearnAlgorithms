@@ -145,7 +145,50 @@ def partition(arr, left = 0, right = None):
   arr[partitionIdx], arr[pivotIdx] = arr[pivotIdx], arr[partitionIdx]
 
   return partitionIdx
+
+## Dijkstra 3-Way Partition Sort
+#Time Complexity = O(n)
+#Space Complexity = O(1)
+
+### Implementation based on Udemy course by Andrei Neagoie & Yihua Zhang
+def threeWaySort(nums, midValue):
+
+  # Edge case handling
+  if len(nums) <= 1:
+      return nums
+  
+  # Select mid value, in this problem, it is 1
+  mid = 1
+  
+  # Initialize 3 pointers
+  # Pointer i --> elements 0 to i = values LESS THAN mid
+  # Pointer j --> elements i to j = values EQUAL TO mid
+  # Pointer k --> elements j to K = values GREATER THAN mid
+  i, j, k = 0, 0, len(nums)-1
+  
+  # Keep going until pointer j passes k
+  while j <= k:
+
+    if nums[j] < mid:
+      # Swap elements at i and j
+      nums[i], nums[j] = nums[j], nums[i]
       
+      # Increase Pointer i and j
+      i += 1
+      j += 1
+        
+    elif nums[j] > mid:
+      # Swap elements at j and k
+      nums[j], nums[k] = nums[k], nums[j]
+      
+      # Reduce pointer k
+      k -= 1
+    else:
+        
+      # Move pointer j
+      j += 1
+  
+  return nums
 
 
 ### Binary Search Implementation Here

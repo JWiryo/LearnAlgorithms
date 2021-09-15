@@ -52,12 +52,15 @@ dijkstraGraph = [
 ]
 dijkstraN = 4
 
+dutchFlagProblem = [2,0,2,1,1,0,2,0,2,1,1,0,2,0,2,1,1,0,2,0,2,1,1,0]
+
 ### Test Sorting Codes Here
 # print(Sorting.bubbleSort(numbers))
 # print(Sorting.selectionSort(numbers))
 # print(Sorting.insertionSort(numbers))
 # print(Sorting.mergeSort(numbers))
 # print(Sorting.quickSort(numbers, 0, len(numbers)-1))
+print(Sorting.threeWaySort(dutchFlagProblem, 1))
 
 ### Test Binary Search Here
 # print(Sorting.binarySearch(Sorting.mergeSort(numbers), 4))
