@@ -12,6 +12,7 @@ import DynamicProgramming.DP_KnightChessboard as kc
 import DynamicProgramming.DP_BuySellStocks as bss
 
 import Backtracking.SudokuSolver as ss
+import Backtracking.Permutation as perm
 
 import InterfaceDesign.Monarchy as monarchy
 
@@ -138,24 +139,34 @@ stockPrices = [7,1,5,3,6,4]
 # print(bss.bruteForceMaxProfit(stockPrices))
 # print(bss.kadaneMaxProfit(stockPrices))
 
+####################################################
+################# Backtracking #####################
+####################################################
+
 ### Test Backtracking-SudokuSolver Here
 board = [["5","3",".",".","7",".",".",".","."],["6",".",".","1","9","5",".",".","."],[".","9","8",".",".",".",".","6","."],["8",".",".",".","6",".",".",".","3"],["4",".",".","8",".","3",".",".","1"],["7",".",".",".","2",".",".",".","6"],[".","6",".",".",".",".","2","8","."],[".",".",".","4","1","9",".",".","5"],[".",".",".",".","8",".",".","7","9"]]
 
 # ss = ss.SudokuSolver()
 # print(ss.solveSudoku(board))
 
+### Test Backtracking-Permutation Here
+numList = [1,2,3]
+
+perm = perm.Permutation()
+print(perm.permutations(numList))
+
 ####################################################
 ############### Interface Design ###################
 ####################################################
-mon = monarchy.Monarchy("Jake")
-mon.birth('Catherine', 'Jake');
-mon.birth('Tom', 'Jake');
-mon.birth('Celine', 'Jake');
-mon.birth('Peter', 'Celine');
-mon.birth('Jane', 'Catherine');
-mon.birth('Farah', 'Jane');
-mon.birth('Mark', 'Catherine');
-mon.death("Jake")
-mon.death("Mark")
+# mon = monarchy.Monarchy("Jake")
+# mon.birth('Catherine', 'Jake');
+# mon.birth('Tom', 'Jake');
+# mon.birth('Celine', 'Jake');
+# mon.birth('Peter', 'Celine');
+# mon.birth('Jane', 'Catherine');
+# mon.birth('Farah', 'Jane');
+# mon.birth('Mark', 'Catherine');
+# mon.death("Jake")
+# mon.death("Mark")
 
-print(mon.orderOfSuccession())
+# print(mon.orderOfSuccession())
