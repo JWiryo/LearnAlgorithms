@@ -15,6 +15,7 @@ import Backtracking.SudokuSolver as ss
 import Backtracking.Permutation as perm
 
 import InterfaceDesign.Monarchy as monarchy
+import InterfaceDesign.Trie as trie
 
 numbers = [99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0, -1, -3]
 matrix = [
@@ -152,8 +153,8 @@ board = [["5","3",".",".","7",".",".",".","."],["6",".",".","1","9","5",".",".",
 ### Test Backtracking-Permutation Here
 numList = [1,2,3]
 
-perm = perm.Permutation()
-print(perm.permutations(numList))
+# perm = perm.Permutation()
+# print(perm.permutations(numList))
 
 ####################################################
 ############### Interface Design ###################
@@ -170,3 +171,13 @@ print(perm.permutations(numList))
 # mon.death("Mark")
 
 # print(mon.orderOfSuccession())
+
+trie = trie.Trie()
+trie.insert("apple");
+print(trie.search("apple"));   # returns true
+print(trie.search("app"));     # returns false
+print(trie.startsWith("app")); # returns true
+trie.insert("dog")
+trie.insert("app");
+print(trie.search("do")) # returns false
+print(trie.startsWith("do")) # returns true
