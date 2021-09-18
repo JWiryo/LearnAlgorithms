@@ -13,6 +13,7 @@ import DynamicProgramming.DP_BuySellStocks as bss
 
 import Backtracking.SudokuSolver as ss
 import Backtracking.Permutation as perm
+import Backtracking.Subsets as subs
 
 import InterfaceDesign.Monarchy as monarchy
 import InterfaceDesign.Trie as trie
@@ -156,6 +157,11 @@ numList = [1,2,3]
 # perm = perm.Permutation()
 # print(perm.permutations(numList))
 
+### Test Backtracking-Subsets Here
+subs = subs.Subset()
+print(subs.subsets(numList))
+
+
 ####################################################
 ############### Interface Design ###################
 ####################################################
@@ -169,15 +175,14 @@ numList = [1,2,3]
 # mon.birth('Mark', 'Catherine');
 # mon.death("Jake")
 # mon.death("Mark")
-
 # print(mon.orderOfSuccession())
 
-trie = trie.Trie()
-trie.insert("apple");
-print(trie.search("apple"));   # returns true
-print(trie.search("app"));     # returns false
-print(trie.startsWith("app")); # returns true
-trie.insert("dog")
-trie.insert("app");
-print(trie.search("do")) # returns false
-print(trie.startsWith("do")) # returns true
+# trie = trie.Trie()
+# trie.insert("apple");
+# print(trie.search("apple"));   # returns true
+# print(trie.search("app"));     # returns false
+# print(trie.startsWith("app")); # returns true
+# trie.insert("dog")
+# trie.insert("app");
+# print(trie.search("do")) # returns false
+# print(trie.startsWith("do")) # returns true
