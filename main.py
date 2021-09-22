@@ -10,6 +10,7 @@ import DynamicProgramming.DP_MinCostStair as mcs
 import DynamicProgramming.DP_ClimbStair as cs
 import DynamicProgramming.DP_KnightChessboard as kc
 import DynamicProgramming.DP_BuySellStocks as bss
+import DynamicProgramming.DP_MinPathSum as mps
 
 import Backtracking.SudokuSolver as ss
 import Backtracking.Permutation as perm
@@ -141,6 +142,11 @@ stockPrices = [7,1,5,3,6,4]
 # print(bss.bruteForceMaxProfit(stockPrices))
 # print(bss.kadaneMaxProfit(stockPrices))
 
+### Test DP-MinPathSum Here
+mpsMatrix = [[1,3,1],[1,5,1],[4,2,1]]
+mps = mps.MinimumPathSum()
+print(mps.memoizedMinPathSum(mpsMatrix))
+
 ####################################################
 ################# Backtracking #####################
 ####################################################
@@ -158,8 +164,8 @@ numList = [1,2,3]
 # print(perm.permutations(numList))
 
 ### Test Backtracking-Subsets Here
-subs = subs.Subset()
-print(subs.subsets(numList))
+# subs = subs.Subset()
+# print(subs.subsets(numList))
 
 
 ####################################################
