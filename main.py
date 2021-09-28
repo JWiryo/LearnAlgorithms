@@ -16,6 +16,7 @@ import DynamicProgramming.DP_UniquePaths as ups
 import Backtracking.SudokuSolver as ss
 import Backtracking.Permutation as perm
 import Backtracking.Subsets as subs
+import Backtracking.PhoneLetterCombinations as plc
 
 import InterfaceDesign.Monarchy as monarchy
 import InterfaceDesign.Trie as trie
@@ -174,6 +175,10 @@ numList = [1,2,3]
 # subs = subs.Subset()
 # print(subs.subsets(numList))
 
+### Test Backtracking-Phone Letters Combination Here
+plc = plc.PhoneLetterComb()
+print(plc.letterCombinations("234"))
+
 
 ####################################################
 ############### Interface Design ###################
@@ -201,13 +206,13 @@ numList = [1,2,3]
 # print(trie.startsWith("do")) # returns true
 
 # cache = cache.LRUCache(2)
-cache = cache.OrderedDictLRUCache(2)
-cache.put(1, 1) # cache is {1=1}
-cache.put(2, 2) # cache is {1=1, 2=2}
-print(cache.get(1))   # return 1
-cache.put(3, 3) # LRU key was 2, evicts key 2, cache is {1=1, 3=3}
-print(cache.get(2))    # returns -1 (not found)
-cache.put(4, 4) # LRU key was 1, evicts key 1, cache is {4=4, 3=3}
-print(cache.get(1))   # return -1 (not found)
-print(cache.get(3))   # return 3
-print(cache.get(4))   # return 4
+# cache = cache.OrderedDictLRUCache(2)
+# cache.put(1, 1) # cache is {1=1}
+# cache.put(2, 2) # cache is {1=1, 2=2}
+# print(cache.get(1))   # return 1
+# cache.put(3, 3) # LRU key was 2, evicts key 2, cache is {1=1, 3=3}
+# print(cache.get(2))    # returns -1 (not found)
+# cache.put(4, 4) # LRU key was 1, evicts key 1, cache is {4=4, 3=3}
+# print(cache.get(1))   # return -1 (not found)
+# print(cache.get(3))   # return 3
+# print(cache.get(4))   # return 4
