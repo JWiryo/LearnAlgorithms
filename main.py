@@ -12,6 +12,7 @@ import DynamicProgramming.DP_KnightChessboard as kc
 import DynamicProgramming.DP_BuySellStocks as bss
 import DynamicProgramming.DP_MinPathSum as mps
 import DynamicProgramming.DP_UniquePaths as ups
+import DynamicProgramming.DP_UniquePathsII as upsII
 
 import Backtracking.SudokuSolver as ss
 import Backtracking.Permutation as perm
@@ -155,6 +156,12 @@ ups = ups.UniquePaths()
 # print(ups.bruteForceUniquePaths(7,3))
 # print(ups.memoUniquePaths(23,12))
 
+### Test DP-UniquePathsII Here
+upsIIObstacleGrid = [[0,0,0],[0,1,0],[0,0,0]]
+upsII = upsII.UniquePathsII()
+print(upsII.bruteForceUniquePathsWithObstacles(upsIIObstacleGrid))
+print(upsII.memoUniquePathsWithObstacles(upsIIObstacleGrid))
+
 ####################################################
 ################# Backtracking #####################
 ####################################################
@@ -177,8 +184,7 @@ numList = [1,2,3]
 
 ### Test Backtracking-Phone Letters Combination Here
 plc = plc.PhoneLetterComb()
-print(plc.letterCombinations("234"))
-
+# print(plc.letterCombinations("234"))
 
 ####################################################
 ############### Interface Design ###################
