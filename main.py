@@ -23,6 +23,8 @@ import InterfaceDesign.Monarchy as monarchy
 import InterfaceDesign.Trie as trie
 import InterfaceDesign.LRUCache as cache
 
+import Popular.SpiralMatrix as spiral
+
 numbers = [99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0, -1, -3]
 matrix = [
   [1, 2, 3, 4, 5],
@@ -158,9 +160,9 @@ ups = ups.UniquePaths()
 
 ### Test DP-UniquePathsII Here
 upsIIObstacleGrid = [[0,0,0],[0,1,0],[0,0,0]]
-upsII = upsII.UniquePathsII()
-print(upsII.bruteForceUniquePathsWithObstacles(upsIIObstacleGrid))
-print(upsII.memoUniquePathsWithObstacles(upsIIObstacleGrid))
+# upsII = upsII.UniquePathsII()
+# print(upsII.bruteForceUniquePathsWithObstacles(upsIIObstacleGrid))
+# print(upsII.memoUniquePathsWithObstacles(upsIIObstacleGrid))
 
 ####################################################
 ################# Backtracking #####################
@@ -222,3 +224,13 @@ plc = plc.PhoneLetterComb()
 # print(cache.get(1))   # return -1 (not found)
 # print(cache.get(3))   # return 3
 # print(cache.get(4))   # return 4
+
+####################################################
+############### Popular Questions ##################
+####################################################
+
+### Test Spiral Matrix Here
+spiralM = [[1,2,3,4],[5,6,7,8],[9,10,11,12],[13,14,15,16]]
+spiral = spiral.SpiralMatrix()
+print(spiral.spiralOrder(spiralM))
+
