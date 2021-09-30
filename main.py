@@ -22,6 +22,7 @@ import Backtracking.PhoneLetterCombinations as plc
 import InterfaceDesign.Monarchy as monarchy
 import InterfaceDesign.Trie as trie
 import InterfaceDesign.LRUCache as cache
+import InterfaceDesign.MyCalendar as cal
 
 import Popular.SpiralMatrix as spiral
 
@@ -225,12 +226,17 @@ plc = plc.PhoneLetterComb()
 # print(cache.get(3))   # return 3
 # print(cache.get(4))   # return 4
 
+calendar = cal.MyCalendar()
+print(calendar.book(10,20)) # True
+print(calendar.book(15,25)) # False
+print(calendar.book(30,45)) # True
+
 ####################################################
 ############### Popular Questions ##################
 ####################################################
 
 ### Test Spiral Matrix Here
 spiralM = [[1,2,3,4],[5,6,7,8],[9,10,11,12],[13,14,15,16]]
-spiral = spiral.SpiralMatrix()
-print(spiral.spiralOrder(spiralM))
+# spiral = spiral.SpiralMatrix()
+# print(spiral.spiralOrder(spiralM))
 
