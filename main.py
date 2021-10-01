@@ -13,6 +13,7 @@ import DynamicProgramming.DP_BuySellStocks as bss
 import DynamicProgramming.DP_MinPathSum as mps
 import DynamicProgramming.DP_UniquePaths as ups
 import DynamicProgramming.DP_UniquePathsII as upsII
+import DynamicProgramming.DP_MaxLengthOfRepeatedSubArray as mlrs
 
 import Backtracking.SudokuSolver as ss
 import Backtracking.Permutation as perm
@@ -165,6 +166,12 @@ upsIIObstacleGrid = [[0,0,0],[0,1,0],[0,0,0]]
 # print(upsII.bruteForceUniquePathsWithObstacles(upsIIObstacleGrid))
 # print(upsII.memoUniquePathsWithObstacles(upsIIObstacleGrid))
 
+### Test DP-MaxLengthOfRepeatedSubArray Here
+nums1 = [1,2,3,2,1]
+nums2 = [3,2,1,4,5]
+mlrs = mlrs.MaxLengthRepeatSubArray()
+print(mlrs.findLength(nums1, nums2))
+
 ####################################################
 ################# Backtracking #####################
 ####################################################
@@ -226,10 +233,10 @@ plc = plc.PhoneLetterComb()
 # print(cache.get(3))   # return 3
 # print(cache.get(4))   # return 4
 
-calendar = cal.MyCalendar()
-print(calendar.book(10,20)) # True
-print(calendar.book(15,25)) # False
-print(calendar.book(30,45)) # True
+# calendar = cal.MyCalendar()
+# print(calendar.book(10,20)) # True
+# print(calendar.book(15,25)) # False
+# print(calendar.book(30,45)) # True
 
 ####################################################
 ############### Popular Questions ##################
