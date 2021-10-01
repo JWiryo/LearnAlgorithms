@@ -1,9 +1,43 @@
 class removeNthFromLinkedList:
 
+    # 2 Pointer 1-pass Solution
+    # Time Complexity: O(N)
+    # Space Complexity: O(1)
+    def onePassRemoveNthFromEnd(self, head, n):
+      
+      # Edge Case
+      if not head:
+        return None
+      
+      # Setup Pointers
+      frontP = head
+      backP = head
+      
+      # Move frontP n-steps forward:
+      for _ in range(n):
+        
+        # Move front pointer forward
+        frontP = frontP.next
+      
+      # Edge Case Handling
+      if not frontP:
+        return head.next
+        
+      while frontP.next:
+        
+        # Move both pointers
+        frontP = frontP.next
+        backP = backP.next
+      
+      # "Remove" Node
+      backP.next = backP.next.next
+      
+      return head
+
     # 1 Pointer two-pass Solution
     # Time Complexity: O(N)
     # Space Complexity: O(1)
-    def removeNthFromEnd(self, head, n):
+    def twoPassRemoveNthFromEnd(self, head, n):
       
       # Edge Case
       if not head:
