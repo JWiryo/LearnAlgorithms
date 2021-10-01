@@ -26,6 +26,7 @@ import InterfaceDesign.LRUCache as cache
 import InterfaceDesign.MyCalendar as cal
 
 import Popular.SpiralMatrix as spiral
+import Popular.MinimumKnightMoves as mkm
 
 numbers = [99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0, -1, -3]
 matrix = [
@@ -169,8 +170,8 @@ upsIIObstacleGrid = [[0,0,0],[0,1,0],[0,0,0]]
 ### Test DP-MaxLengthOfRepeatedSubArray Here
 nums1 = [1,2,3,2,1]
 nums2 = [3,2,1,4,5]
-mlrs = mlrs.MaxLengthRepeatSubArray()
-print(mlrs.findLength(nums1, nums2))
+# mlrs = mlrs.MaxLengthRepeatSubArray()
+# print(mlrs.findLength(nums1, nums2))
 
 ####################################################
 ################# Backtracking #####################
@@ -246,4 +247,10 @@ plc = plc.PhoneLetterComb()
 spiralM = [[1,2,3,4],[5,6,7,8],[9,10,11,12],[13,14,15,16]]
 # spiral = spiral.SpiralMatrix()
 # print(spiral.spiralOrder(spiralM))
+
+### Test MinimumKnightMoves Here
+mkmX = 2
+mkmY = 1
+mkm = mkm.MinimumKnightMoves()
+print(mkm.minKnightMoves(mkmX, mkmY))
 
