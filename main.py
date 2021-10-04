@@ -24,6 +24,7 @@ import InterfaceDesign.Monarchy as monarchy
 import InterfaceDesign.Trie as trie
 import InterfaceDesign.LRUCache as cache
 import InterfaceDesign.MyCalendar as cal
+import InterfaceDesign.AverageDataStream as avgdatastream
 
 import Popular.SpiralMatrix as spiral
 import Popular.MinimumKnightMoves as mkm
@@ -239,6 +240,12 @@ plc = plc.PhoneLetterComb()
 # print(calendar.book(15,25)) # False
 # print(calendar.book(30,45)) # True
 
+avgdatastream = avgdatastream.MovingAverageDataStream(3)
+print(avgdatastream.next(1))
+print(avgdatastream.next(2))
+print(avgdatastream.next(3))
+print(avgdatastream.next(4))
+
 ####################################################
 ############### Popular Questions ##################
 ####################################################
@@ -251,6 +258,6 @@ spiralM = [[1,2,3,4],[5,6,7,8],[9,10,11,12],[13,14,15,16]]
 ### Test MinimumKnightMoves Here
 mkmX = 2
 mkmY = 1
-mkm = mkm.MinimumKnightMoves()
-print(mkm.minKnightMoves(mkmX, mkmY))
+# mkm = mkm.MinimumKnightMoves()
+# print(mkm.minKnightMoves(mkmX, mkmY))
 
