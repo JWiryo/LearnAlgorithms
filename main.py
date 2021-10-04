@@ -15,6 +15,7 @@ import DynamicProgramming.DP_UniquePaths as ups
 import DynamicProgramming.DP_UniquePathsII as upsII
 import DynamicProgramming.DP_MaxLengthOfRepeatedSubArray as mlrs
 import DynamicProgramming.DP_LongestCommonSubsequence as lcs
+import DynamicProgramming.DP_CoinChange as coin
 
 import Backtracking.SudokuSolver as ss
 import Backtracking.Permutation as perm
@@ -178,9 +179,13 @@ nums2 = [3,2,1,4,5]
 ### Test DP-LongestCommonSubsequence Here
 lcsText1 = "ylqpejqbalahwr"
 lcsText2 = "yrkzavgdmdgtqpg"
-lcs = lcs.LongestCommonSubsequence()
-print(lcs.memoRecursiveLongestCommonSubsequence(lcsText1, lcsText2))
-print(lcs.bottomUpLongestCommonSubsequence(lcsText1, lcsText2))
+# lcs = lcs.LongestCommonSubsequence()
+# print(lcs.memoRecursiveLongestCommonSubsequence(lcsText1, lcsText2))
+# print(lcs.bottomUpLongestCommonSubsequence(lcsText1, lcsText2))
+
+### Test DP-CoinChange Here
+coin = coin.CoinChange()
+print(coin.memoCoinChange([1,2,3,4,5], 25))
 
 ####################################################
 ################# Backtracking #####################
