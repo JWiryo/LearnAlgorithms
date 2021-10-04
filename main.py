@@ -186,6 +186,7 @@ lcsText2 = "yrkzavgdmdgtqpg"
 ### Test DP-CoinChange Here
 coin = coin.CoinChange()
 print(coin.memoCoinChange([1,2,3,4,5], 25))
+print(coin.bottomUpCoinChange([1,2,3,4,5], 25))
 
 ####################################################
 ################# Backtracking #####################

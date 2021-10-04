@@ -53,3 +53,29 @@ class CoinChange:
       
       # Else, return value
       return memo[amount]
+
+    def bottomUpCoinChange(self, coins: [int], amount: int) -> int:
+      
+      # Edge Case
+      if amount == 0:
+        return 0
+      
+      # Setup Memo table
+      memo = [float('inf') for i in range(amount+1)]
+      
+      # Initialise Memo table where amount == 0
+      memo[0] = 0
+      
+      # Fill-up table until we reach amount
+      for coinVal in range(1, amount+1):
+        for coin in coins:
+          
+          if coinVal - coin >= 0:
+            memo[coinVal] = min(memo[coinVal], memo[coinVal-coin] + 1)
+      
+      # Edge case where no change can be made
+      if memo[coinVal] == float('inf'):
+        return -1
+      
+      # Else, return value
+      return memo[amount]
