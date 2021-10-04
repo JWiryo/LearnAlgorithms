@@ -14,6 +14,7 @@ import DynamicProgramming.DP_MinPathSum as mps
 import DynamicProgramming.DP_UniquePaths as ups
 import DynamicProgramming.DP_UniquePathsII as upsII
 import DynamicProgramming.DP_MaxLengthOfRepeatedSubArray as mlrs
+import DynamicProgramming.DP_LongestCommonSubsequence as lcs
 
 import Backtracking.SudokuSolver as ss
 import Backtracking.Permutation as perm
@@ -174,6 +175,13 @@ nums2 = [3,2,1,4,5]
 # mlrs = mlrs.MaxLengthRepeatSubArray()
 # print(mlrs.findLength(nums1, nums2))
 
+### Test DP-LongestCommonSubsequence Here
+lcsText1 = "ylqpejqbalahwr"
+lcsText2 = "yrkzavgdmdgtqpg"
+lcs = lcs.LongestCommonSubsequence()
+print(lcs.memoRecursiveLongestCommonSubsequence(lcsText1, lcsText2))
+print(lcs.bottomUpLongestCommonSubsequence(lcsText1, lcsText2))
+
 ####################################################
 ################# Backtracking #####################
 ####################################################
@@ -240,11 +248,11 @@ plc = plc.PhoneLetterComb()
 # print(calendar.book(15,25)) # False
 # print(calendar.book(30,45)) # True
 
-avgdatastream = avgdatastream.MovingAverageDataStream(3)
-print(avgdatastream.next(1))
-print(avgdatastream.next(2))
-print(avgdatastream.next(3))
-print(avgdatastream.next(4))
+# avgdatastream = avgdatastream.MovingAverageDataStream(3)
+# print(avgdatastream.next(1))
+# print(avgdatastream.next(2))
+# print(avgdatastream.next(3))
+# print(avgdatastream.next(4))
 
 ####################################################
 ############### Popular Questions ##################
