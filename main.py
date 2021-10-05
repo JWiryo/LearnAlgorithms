@@ -30,6 +30,7 @@ import InterfaceDesign.AverageDataStream as avgdatastream
 
 import Popular.SpiralMatrix as spiral
 import Popular.MinimumKnightMoves as mkm
+import Popular.SlidingWindowMaximum as swm
 
 numbers = [99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0, -1, -3]
 matrix = [
@@ -184,9 +185,9 @@ lcsText2 = "yrkzavgdmdgtqpg"
 # print(lcs.bottomUpLongestCommonSubsequence(lcsText1, lcsText2))
 
 ### Test DP-CoinChange Here
-coin = coin.CoinChange()
-print(coin.memoCoinChange([1,2,3,4,5], 25))
-print(coin.bottomUpCoinChange([1,2,3,4,5], 25))
+# coin = coin.CoinChange()
+# print(coin.memoCoinChange([1,2,3,4,5], 25))
+# print(coin.bottomUpCoinChange([1,2,3,4,5], 25))
 
 ####################################################
 ################# Backtracking #####################
@@ -209,7 +210,7 @@ numList = [1,2,3]
 # print(subs.subsets(numList))
 
 ### Test Backtracking-Phone Letters Combination Here
-plc = plc.PhoneLetterComb()
+# plc = plc.PhoneLetterComb()
 # print(plc.letterCombinations("234"))
 
 ####################################################
@@ -274,4 +275,10 @@ mkmX = 2
 mkmY = 1
 # mkm = mkm.MinimumKnightMoves()
 # print(mkm.minKnightMoves(mkmX, mkmY))
+
+### Test SlidingWindowMaximum Here
+swmNums = [1,3,-1,-3,5,3,6,7]
+swmK = 3
+swm = swm.SlidingWindowMaximum()
+print(swm.optimizedMaxSlidingWindow(swmNums, swmK))
 
