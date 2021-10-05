@@ -32,6 +32,8 @@ import Popular.SpiralMatrix as spiral
 import Popular.MinimumKnightMoves as mkm
 import Popular.SlidingWindowMaximum as swm
 
+import Tests.SimpleHashMapTest as SimpleHashMapTest
+
 numbers = [99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0, -1, -3]
 matrix = [
   [1, 2, 3, 4, 5],
@@ -279,6 +281,9 @@ mkmY = 1
 ### Test SlidingWindowMaximum Here
 swmNums = [1,3,-1,-3,5,3,6,7]
 swmK = 3
-swm = swm.SlidingWindowMaximum()
-print(swm.optimizedMaxSlidingWindow(swmNums, swmK))
+# swm = swm.SlidingWindowMaximum()
+# print(swm.optimizedMaxSlidingWindow(swmNums, swmK))
+
+shm = SimpleHashMapTest.TestSimpleHashMap()
+shm.run()
 
