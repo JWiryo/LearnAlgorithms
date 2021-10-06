@@ -31,8 +31,7 @@ import InterfaceDesign.AverageDataStream as avgdatastream
 import Popular.SpiralMatrix as spiral
 import Popular.MinimumKnightMoves as mkm
 import Popular.SlidingWindowMaximum as swm
-
-import Tests.SimpleHashMapTest as SimpleHashMapTest
+import Popular.AddNegabinaryNumbers as anbn
 
 numbers = [99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0, -1, -3]
 matrix = [
@@ -284,6 +283,8 @@ swmK = 3
 # swm = swm.SlidingWindowMaximum()
 # print(swm.optimizedMaxSlidingWindow(swmNums, swmK))
 
-shm = SimpleHashMapTest.TestSimpleHashMap()
-shm.run()
-
+### Test AddNegabinaryNumbers Here
+nbnum1 = [[1,1,1,1,1]]
+nbnum2 = [1,0,1]
+anbn = anbn.NegaBinary()
+print(anbn.addNegabinary(nbnum1,nbnum2))
