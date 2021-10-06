@@ -32,6 +32,7 @@ import Popular.SpiralMatrix as spiral
 import Popular.MinimumKnightMoves as mkm
 import Popular.SlidingWindowMaximum as swm
 import Popular.AddNegabinaryNumbers as anbn
+import Popular.BulbSwitcherIII as bsIII
 
 numbers = [99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0, -1, -3]
 matrix = [
@@ -284,7 +285,12 @@ swmK = 3
 # print(swm.optimizedMaxSlidingWindow(swmNums, swmK))
 
 ### Test AddNegabinaryNumbers Here
-nbnum1 = [[1,1,1,1,1]]
+nbnum1 = [1,1,1,1,1]
 nbnum2 = [1,0,1]
-anbn = anbn.NegaBinary()
-print(anbn.addNegabinary(nbnum1,nbnum2))
+# anbn = anbn.NegaBinary()
+# print(anbn.addNegabinary(nbnum1,nbnum2))
+
+### Test AddNegabinaryNumbers Here
+lightmoments = [2,1,3,4,5]
+bsIII = bsIII.BulbSwitcherIII()
+print(bsIII.optimizedNumTimesAllBlue(lightmoments))
