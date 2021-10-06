@@ -33,6 +33,7 @@ import Popular.MinimumKnightMoves as mkm
 import Popular.SlidingWindowMaximum as swm
 import Popular.AddNegabinaryNumbers as anbn
 import Popular.BulbSwitcherIII as bsIII
+import Popular.AddStringNumbers as asn
 
 numbers = [99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0, -1, -3]
 matrix = [
@@ -292,5 +293,11 @@ nbnum2 = [1,0,1]
 
 ### Test AddNegabinaryNumbers Here
 lightmoments = [2,1,3,4,5]
-bsIII = bsIII.BulbSwitcherIII()
-print(bsIII.optimizedNumTimesAllBlue(lightmoments))
+# bsIII = bsIII.BulbSwitcherIII()
+# print(bsIII.optimizedNumTimesAllBlue(lightmoments))
+
+### Test AddStringNumbers Here (Very Important to master)
+stringNum1 = "12345678"
+stringNum2 = "23456789"
+asn = asn.AddStringsNumbers()
+print(asn.addStrings(stringNum1, stringNum2))
