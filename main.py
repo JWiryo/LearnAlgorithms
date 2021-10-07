@@ -34,6 +34,7 @@ import Popular.SlidingWindowMaximum as swm
 import Popular.AddNegabinaryNumbers as anbn
 import Popular.BulbSwitcherIII as bsIII
 import Popular.AddStringNumbers as asn
+import Popular.TopKFrequentElements as tkfe
 
 numbers = [99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0, -1, -3]
 matrix = [
@@ -299,5 +300,9 @@ lightmoments = [2,1,3,4,5]
 ### Test AddStringNumbers Here (Very Important to master)
 stringNum1 = "12345678"
 stringNum2 = "23456789"
-asn = asn.AddStringsNumbers()
-print(asn.addStrings(stringNum1, stringNum2))
+# asn = asn.AddStringsNumbers()
+# print(asn.addStrings(stringNum1, stringNum2))
+
+### Test TopKFrequent Elements Here
+tkfe = tkfe.TopKFrequentElements()
+print(tkfe.topKFrequent([1,1,1,2,2,3], 2))
