@@ -87,6 +87,7 @@ dutchFlagProblem = [2,0,2,1,1,0,2,0,2,1,1,0,2,0,2,1,1,0,2,0,2,1,1,0]
 
 ### Test Binary Search Here
 # print(Sorting.binarySearch(Sorting.mergeSort(numbers), 4))
+print(Sorting.binarySearchRotated([4,5,7,0,1,2,3], 2))
 
 ### Test Heap & Priority Queue Here
 # pq = pq.PriorityQueue()
@@ -304,5 +305,5 @@ stringNum2 = "23456789"
 # print(asn.addStrings(stringNum1, stringNum2))
 
 ### Test TopKFrequent Elements Here
-tkfe = tkfe.TopKFrequentElements()
-print(tkfe.topKFrequent([1,1,1,2,2,3], 2))
+# tkfe = tkfe.TopKFrequentElements()
+# print(tkfe.topKFrequent([1,1,1,2,2,3], 2))

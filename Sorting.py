@@ -191,8 +191,10 @@ def threeWaySort(nums, midValue):
   return nums
 
 
-### Binary Search Implementation Here
-
+### Binary Search Implementations Here
+# Binary Search for Normal Sorted Array
+# Time Complexity: O(Log N)
+# Space Complexity: O(1)
 def binarySearch(arr, target):
 
   left = 0
@@ -208,6 +210,64 @@ def binarySearch(arr, target):
       left = mid + 1
     else:
       right = mid - 1
+    
+  return -1
+
+# Binary Search for Rotated Array Solution; Idea is to keep searching wherever side we know that is sorted
+# Time Complexity: O(Log N)
+# Space Complexity: O(1)
+
+def binarySearchRotated (nums: [int], target: int) -> int:
+  
+  # Initiate left and right pointer
+  left = 0
+  right = len(nums) - 1
+  
+  # In case we found on first try, just return the values
+  if nums[left] == target:
+    return left
+  elif nums[right] == target:
+    return right
+  
+  # Perform binary search
+  while left <= right:
+    
+    # Calculate mid      
+    mid = (left + right) // 2
+
+    # Incase we found target at mid
+    if nums[mid] == target:
+      return mid
+
+    # If first element is less than mid element, we know that left side is sorted
+    if nums[left] <= nums[mid]:
+      
+      # If target value is less than or equal to left element and less than mid element, we go left
+      if target >= nums[left] and target < nums[mid]:
+        
+        # Update right pointer
+        right = mid - 1
+      
+      # Otherwise,
+      else:
+        
+        # Update left pointer
+        left = mid + 1
+
+    # Else, we know it is on the right side is sorted
+    else:
+      
+      # If target value is greater than or equal to mid and target value less than right, we go right
+      if target <= nums[right] and target > nums[mid]:
+        
+        # Update left pointer
+        left = mid + 1
+      
+      # Otherwise,
+      else:
+        
+        # Update right pointer
+        right = mid - 1
     
   return -1
 
