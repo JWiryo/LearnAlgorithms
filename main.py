@@ -16,6 +16,7 @@ import DynamicProgramming.DP_UniquePathsII as upsII
 import DynamicProgramming.DP_MaxLengthOfRepeatedSubArray as mlrs
 import DynamicProgramming.DP_LongestCommonSubsequence as lcs
 import DynamicProgramming.DP_CoinChange as coin
+import DynamicProgramming.DP_TargetSum as ts
 
 import Backtracking.SudokuSolver as ss
 import Backtracking.Permutation as perm
@@ -193,6 +194,12 @@ lcsText2 = "yrkzavgdmdgtqpg"
 # coin = coin.CoinChange()
 # print(coin.memoCoinChange([1,2,3,4,5], 25))
 # print(coin.bottomUpCoinChange([1,2,3,4,5], 25))
+
+### Test DP-TargetSum Here
+targetSum = [1,1,1,1,1]
+targetTarget = 3
+ts = ts.TargetSum()
+print(ts.findTargetSumWays(targetSum, targetTarget))
 
 ####################################################
 ################# Backtracking #####################
