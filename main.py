@@ -17,6 +17,7 @@ import DynamicProgramming.DP_MaxLengthOfRepeatedSubArray as mlrs
 import DynamicProgramming.DP_LongestCommonSubsequence as lcs
 import DynamicProgramming.DP_CoinChange as coin
 import DynamicProgramming.DP_TargetSum as ts
+import DynamicProgramming.DP_HouseRobber as hr
 
 import Backtracking.SudokuSolver as ss
 import Backtracking.Permutation as perm
@@ -196,10 +197,15 @@ lcsText2 = "yrkzavgdmdgtqpg"
 # print(coin.bottomUpCoinChange([1,2,3,4,5], 25))
 
 ### Test DP-TargetSum Here
-targetSum = [1,1,1,1,1]
-targetTarget = 3
-ts = ts.TargetSum()
-print(ts.findTargetSumWays(targetSum, targetTarget))
+# targetSum = [1,1,1,1,1]
+# targetTarget = 3
+# ts = ts.TargetSum()
+# print(ts.findTargetSumWays(targetSum, targetTarget))
+
+### Test DP-HouseRobber Here
+hrHouse = [1,2,3,4,5]
+hr = hr.HouseRobber()
+print(hr.rob(hrHouse))
 
 ####################################################
 ################# Backtracking #####################
