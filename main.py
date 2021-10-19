@@ -18,6 +18,7 @@ import DynamicProgramming.DP_LongestCommonSubsequence as lcs
 import DynamicProgramming.DP_CoinChange as coin
 import DynamicProgramming.DP_TargetSum as ts
 import DynamicProgramming.DP_HouseRobber as hr
+import DynamicProgramming.DP_PascalTriangle as ptri
 
 import Backtracking.SudokuSolver as ss
 import Backtracking.Permutation as perm
@@ -203,9 +204,14 @@ lcsText2 = "yrkzavgdmdgtqpg"
 # print(ts.findTargetSumWays(targetSum, targetTarget))
 
 ### Test DP-HouseRobber Here
-hrHouse = [1,2,3,4,5]
-hr = hr.HouseRobber()
-print(hr.rob(hrHouse))
+# hrHouse = [1,2,3,4,5]
+# hr = hr.HouseRobber()
+# print(hr.rob(hrHouse))
+
+### Test DP-PascalTriangle Here
+pascalNumRows = 5
+ptri = ptri.PascalTriangle()
+print(ptri.generate(pascalNumRows))
 
 ####################################################
 ################# Backtracking #####################
