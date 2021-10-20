@@ -38,6 +38,7 @@ import Popular.AddNegabinaryNumbers as anbn
 import Popular.BulbSwitcherIII as bsIII
 import Popular.AddStringNumbers as asn
 import Popular.TopKFrequentElements as tkfe
+import Popular.GroupAnagrams as gana
 
 numbers = [99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0, -1, -3]
 matrix = [
@@ -209,9 +210,9 @@ lcsText2 = "yrkzavgdmdgtqpg"
 # print(hr.rob(hrHouse))
 
 ### Test DP-PascalTriangle Here
-pascalNumRows = 5
-ptri = ptri.PascalTriangle()
-print(ptri.generate(pascalNumRows))
+# pascalNumRows = 5
+# ptri = ptri.PascalTriangle()
+# print(ptri.generate(pascalNumRows))
 
 ####################################################
 ################# Backtracking #####################
@@ -326,3 +327,9 @@ stringNum2 = "23456789"
 ### Test TopKFrequent Elements Here
 # tkfe = tkfe.TopKFrequentElements()
 # print(tkfe.topKFrequent([1,1,1,2,2,3], 2))
+
+### Test GroupAnagrams Here
+anagramStrings = ["eat","tea","tan","ate","nat","bat"]
+gana = gana.groupAnagrams()
+print(gana.groupAnagrams(anagramStrings))
+
