@@ -30,6 +30,7 @@ import InterfaceDesign.Trie as trie
 import InterfaceDesign.LRUCache as cache
 import InterfaceDesign.MyCalendar as cal
 import InterfaceDesign.AverageDataStream as avgdatastream
+import InterfaceDesign.SparseVector as sparsevec
 
 import Popular.SpiralMatrix as spiral
 import Popular.MinimumKnightMoves as mkm
@@ -286,6 +287,10 @@ numList = [1,2,3]
 # print(avgdatastream.next(3))
 # print(avgdatastream.next(4))
 
+sparsevec1 = sparsevec.SparseVector([1,2,0,0,4])
+sparsevec2 = sparsevec.SparseVector([0,3,0,-1,2])
+print(sparsevec1.dotProduct(sparsevec2))
+
 ####################################################
 ############### Popular Questions ##################
 ####################################################
@@ -330,6 +335,6 @@ stringNum2 = "23456789"
 
 ### Test GroupAnagrams Here
 anagramStrings = ["eat","tea","tan","ate","nat","bat"]
-gana = gana.groupAnagrams()
-print(gana.groupAnagrams(anagramStrings))
+# gana = gana.groupAnagrams()
+# print(gana.groupAnagrams(anagramStrings))
 
