@@ -41,6 +41,7 @@ import Popular.BulbSwitcherIII as bsIII
 import Popular.AddStringNumbers as asn
 import Popular.TopKFrequentElements as tkfe
 import Popular.GroupAnagrams as gana
+import Popular.FindAndReplacePattern as fandr
 
 numbers = [99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0, -1, -3]
 matrix = [
@@ -241,10 +242,10 @@ numList = [1,2,3]
 # print(plc.letterCombinations("234"))
 
 ### Test Backtracking-Combination Sum  Here
-csCandidates = [2,3,5,6,7]
-csTarget = 8
-combsum = combsum.CombinationSum()
-print(combsum.combinationSum(csCandidates, csTarget))
+# csCandidates = [2,3,5,6,7]
+# csTarget = 8
+# combsum = combsum.CombinationSum()
+# print(combsum.combinationSum(csCandidates, csTarget))
 
 
 ####################################################
@@ -345,4 +346,10 @@ stringNum2 = "23456789"
 anagramStrings = ["eat","tea","tan","ate","nat","bat"]
 # gana = gana.groupAnagrams()
 # print(gana.groupAnagrams(anagramStrings))
+
+### Test FindAndReplacePattern Here
+fandrWords = ["abc","deq","mee","aqq","dkd","ccc"]
+fandrpattern = "abb"
+fandr = fandr.FindAndReplace()
+print(fandr.findAndReplacePattern(fandrWords, fandrpattern))
 
