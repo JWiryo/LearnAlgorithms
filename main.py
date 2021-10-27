@@ -24,6 +24,7 @@ import Backtracking.SudokuSolver as ss
 import Backtracking.Permutation as perm
 import Backtracking.Subsets as subs
 import Backtracking.PhoneLetterCombinations as plc
+import Backtracking.CombinationSum as combsum
 
 import InterfaceDesign.Monarchy as monarchy
 import InterfaceDesign.Trie as trie
@@ -239,6 +240,13 @@ numList = [1,2,3]
 # plc = plc.PhoneLetterComb()
 # print(plc.letterCombinations("234"))
 
+### Test Backtracking-Combination Sum  Here
+csCandidates = [2,3,5,6,7]
+csTarget = 8
+combsum = combsum.CombinationSum()
+print(combsum.combinationSum(csCandidates, csTarget))
+
+
 ####################################################
 ############### Interface Design ###################
 ####################################################
@@ -287,9 +295,9 @@ numList = [1,2,3]
 # print(avgdatastream.next(3))
 # print(avgdatastream.next(4))
 
-sparsevec1 = sparsevec.SparseVector([1,2,0,0,4])
-sparsevec2 = sparsevec.SparseVector([0,3,0,-1,2])
-print(sparsevec1.dotProduct(sparsevec2))
+# sparsevec1 = sparsevec.SparseVector([1,2,0,0,4])
+# sparsevec2 = sparsevec.SparseVector([0,3,0,-1,2])
+# print(sparsevec1.dotProduct(sparsevec2))
 
 ####################################################
 ############### Popular Questions ##################
