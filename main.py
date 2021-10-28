@@ -149,7 +149,8 @@ print(cbtwo.bitConvertToBinaryTwo(195))
 
 # Test Base -2 Conversion
 cbnegtwo = cbnegtwo.BinaryConvertBaseNegative2()
-print(cbnegtwo.baseNeg2(10))
+print(cbnegtwo.baseNeg2(100))
+print(cbnegtwo.bitBaseNeg2(100))
 
 ####################################################
 ###################### DP ##########################

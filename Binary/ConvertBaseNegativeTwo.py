@@ -38,3 +38,23 @@ class BinaryConvertBaseNegative2:
       
       # Return reversed stack
       return "".join(ansStack[::-1])
+
+    def bitBaseNeg2(self, n:int) -> str:
+
+        # Prepare stack
+        stack = []
+
+        # Keep looping until num reaches 0
+        while n:
+
+          # Perform bitwise AND with 1, this is the same as N % 2
+          rem = n & 1
+
+          # Push remainder to stack
+          stack.append(str(rem))
+
+          # Calculate new num by floor division using RIGHT SHIFT of 1
+          n = -(n >> 1)
+        
+        # Return reversed stack
+        return "".join(stack[::-1])
