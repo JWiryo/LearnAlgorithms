@@ -6,6 +6,8 @@ import TopologicalSort as ts
 import Dijkstra as ds
 import BellmanFord as bf
 
+import Binary.ConvertBaseTwo as cbtwo
+
 import DynamicProgramming.DP_MinCostStair as mcs
 import DynamicProgramming.DP_ClimbStair as cs
 import DynamicProgramming.DP_KnightChessboard as kc
@@ -134,6 +136,14 @@ dutchFlagProblem = [2,0,2,1,1,0,2,0,2,1,1,0,2,0,2,1,1,0,2,0,2,1,1,0]
 # bf = bf.BellmanFord()
 # print(bf.BellmanFord(dijkstraGraph, dijkstraN, 0))
 
+
+####################################################
+#################### Binary ########################
+####################################################
+
+# Test Base 2 Conversion
+cbtwo = cbtwo.BinaryConvertBase2()
+print(cbtwo.convertToBinaryTwo(10))
 
 ####################################################
 ###################### DP ##########################
@@ -348,8 +358,8 @@ anagramStrings = ["eat","tea","tan","ate","nat","bat"]
 # print(gana.groupAnagrams(anagramStrings))
 
 ### Test FindAndReplacePattern Here
-fandrWords = ["abc","deq","mee","aqq","dkd","ccc"]
-fandrpattern = "abb"
-fandr = fandr.FindAndReplace()
-print(fandr.findAndReplacePattern(fandrWords, fandrpattern))
+# fandrWords = ["abc","deq","mee","aqq","dkd","ccc"]
+# fandrpattern = "abb"
+# fandr = fandr.FindAndReplace()
+# print(fandr.findAndReplacePattern(fandrWords, fandrpattern))
 
