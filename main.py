@@ -144,7 +144,8 @@ dutchFlagProblem = [2,0,2,1,1,0,2,0,2,1,1,0,2,0,2,1,1,0,2,0,2,1,1,0]
 
 # Test Base 2 Conversion
 cbtwo = cbtwo.BinaryConvertBase2()
-print(cbtwo.convertToBinaryTwo(10))
+print(cbtwo.convertToBinaryTwo(195))
+print(cbtwo.bitConvertToBinaryTwo(195))
 
 # Test Base -2 Conversion
 cbnegtwo = cbnegtwo.BinaryConvertBaseNegative2()
