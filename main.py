@@ -7,6 +7,7 @@ import Dijkstra as ds
 import BellmanFord as bf
 
 import Binary.ConvertBaseTwo as cbtwo
+import Binary.ConvertBaseNegativeTwo as cbnegtwo
 
 import DynamicProgramming.DP_MinCostStair as mcs
 import DynamicProgramming.DP_ClimbStair as cs
@@ -144,6 +145,10 @@ dutchFlagProblem = [2,0,2,1,1,0,2,0,2,1,1,0,2,0,2,1,1,0,2,0,2,1,1,0]
 # Test Base 2 Conversion
 cbtwo = cbtwo.BinaryConvertBase2()
 print(cbtwo.convertToBinaryTwo(10))
+
+# Test Base -2 Conversion
+cbnegtwo = cbnegtwo.BinaryConvertBaseNegative2()
+print(cbnegtwo.baseNeg2(10))
 
 ####################################################
 ###################### DP ##########################
