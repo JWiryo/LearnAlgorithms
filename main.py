@@ -45,6 +45,7 @@ import Popular.AddStringNumbers as asn
 import Popular.TopKFrequentElements as tkfe
 import Popular.GroupAnagrams as gana
 import Popular.FindAndReplacePattern as fandr
+import Popular.RobotBoundedInCircle as robotcircle
 
 numbers = [99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0, -1, -3]
 matrix = [
@@ -143,14 +144,14 @@ dutchFlagProblem = [2,0,2,1,1,0,2,0,2,1,1,0,2,0,2,1,1,0,2,0,2,1,1,0]
 ####################################################
 
 # Test Base 2 Conversion
-cbtwo = cbtwo.BinaryConvertBase2()
-print(cbtwo.convertToBinaryTwo(195))
-print(cbtwo.bitConvertToBinaryTwo(195))
+# cbtwo = cbtwo.BinaryConvertBase2()
+# print(cbtwo.convertToBinaryTwo(195))
+# print(cbtwo.bitConvertToBinaryTwo(195))
 
 # Test Base -2 Conversion
-cbnegtwo = cbnegtwo.BinaryConvertBaseNegative2()
-print(cbnegtwo.baseNeg2(100))
-print(cbnegtwo.bitBaseNeg2(100))
+# cbnegtwo = cbnegtwo.BinaryConvertBaseNegative2()
+# print(cbnegtwo.baseNeg2(100))
+# print(cbnegtwo.bitBaseNeg2(100))
 
 ####################################################
 ###################### DP ##########################
@@ -369,4 +370,9 @@ anagramStrings = ["eat","tea","tan","ate","nat","bat"]
 # fandrpattern = "abb"
 # fandr = fandr.FindAndReplace()
 # print(fandr.findAndReplacePattern(fandrWords, fandrpattern))
+
+### Test Robot In Circle Here
+robotcircle = robotcircle.RobotCircle()
+print(robotcircle.isRobotBounded("GLLRG"))
+
 
