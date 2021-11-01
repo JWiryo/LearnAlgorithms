@@ -48,6 +48,7 @@ import Popular.FindAndReplacePattern as fandr
 import Popular.RobotBoundedInCircle as robotcircle
 import Popular.AsteroidCollision as asteroidcoll
 import Popular.LongestHappyString as longhapstring
+import Popular.ReconstructBinaryMatrix as recbinmat
 
 numbers = [99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0, -1, -3]
 matrix = [
@@ -382,6 +383,10 @@ anagramStrings = ["eat","tea","tan","ate","nat","bat"]
 # print(asteroidcoll.asteroidCollision([-2,-2,1,-2]))
 
 ### Test Longest Happy String Here
-longhapstring = longhapstring.LongestHappyString()
-print(longhapstring.longestDiverseString(1,2,7))
+# longhapstring = longhapstring.LongestHappyString()
+# print(longhapstring.longestDiverseString(1,2,7))
+
+### Test Reconstruct Binary Matrix Here
+recbinmat = recbinmat.ReconstructBinaryMatrix()
+print(recbinmat.reconstructMatrix(5,5,[2,1,2,0,1,0,1,2,0,1]))
 
