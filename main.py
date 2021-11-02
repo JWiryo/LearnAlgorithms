@@ -49,6 +49,7 @@ import Popular.RobotBoundedInCircle as robotcircle
 import Popular.AsteroidCollision as asteroidcoll
 import Popular.LongestHappyString as longhapstring
 import Popular.ReconstructBinaryMatrix as recbinmat
+import Popular.MinimumMovesToMedian as minmovemed
 
 numbers = [99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0, -1, -3]
 matrix = [
@@ -387,6 +388,10 @@ anagramStrings = ["eat","tea","tan","ate","nat","bat"]
 # print(longhapstring.longestDiverseString(1,2,7))
 
 ### Test Reconstruct Binary Matrix Here
-recbinmat = recbinmat.ReconstructBinaryMatrix()
-print(recbinmat.reconstructMatrix(5,5,[2,1,2,0,1,0,1,2,0,1]))
+# recbinmat = recbinmat.ReconstructBinaryMatrix()
+# print(recbinmat.reconstructMatrix(5,5,[2,1,2,0,1,0,1,2,0,1]))
+
+### Test Minimum Move to Median Here
+minmovemed = minmovemed.MinMoveToMedian()
+print(minmovemed.minMoves2([1,2,3,4,5,6]))
 
