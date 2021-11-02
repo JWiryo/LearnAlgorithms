@@ -28,6 +28,7 @@ import Backtracking.Permutation as perm
 import Backtracking.Subsets as subs
 import Backtracking.PhoneLetterCombinations as plc
 import Backtracking.CombinationSum as combsum
+import Backtracking.CombinationSumII as combsum2
 
 import InterfaceDesign.Monarchy as monarchy
 import InterfaceDesign.Trie as trie
@@ -269,6 +270,10 @@ numList = [1,2,3]
 # combsum = combsum.CombinationSum()
 # print(combsum.combinationSum(csCandidates, csTarget))
 
+### Test Backtracking-Combination Sum II  Here
+combsum2 = combsum2.CombinationSumII()
+print(combsum2.combinationSum2([10,1,2,7,6,1,5], 8))
+
 
 ####################################################
 ############### Interface Design ###################
@@ -392,6 +397,6 @@ anagramStrings = ["eat","tea","tan","ate","nat","bat"]
 # print(recbinmat.reconstructMatrix(5,5,[2,1,2,0,1,0,1,2,0,1]))
 
 ### Test Minimum Move to Median Here
-minmovemed = minmovemed.MinMoveToMedian()
-print(minmovemed.minMoves2([1,2,3,4,5,6]))
+# minmovemed = minmovemed.MinMoveToMedian()
+# print(minmovemed.minMoves2([1,2,3,4,5,6]))
 
