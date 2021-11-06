@@ -51,6 +51,7 @@ import Popular.AsteroidCollision as asteroidcoll
 import Popular.LongestHappyString as longhapstring
 import Popular.ReconstructBinaryMatrix as recbinmat
 import Popular.MinimumMovesToMedian as minmovemed
+import Popular.MaximumUnitsOnATruck as maxtruck
 
 numbers = [99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0, -1, -3]
 matrix = [
@@ -271,8 +272,8 @@ numList = [1,2,3]
 # print(combsum.combinationSum(csCandidates, csTarget))
 
 ### Test Backtracking-Combination Sum II  Here
-combsum2 = combsum2.CombinationSumII()
-print(combsum2.combinationSum2([10,1,2,7,6,1,5], 8))
+# combsum2 = combsum2.CombinationSumII()
+# print(combsum2.combinationSum2([10,1,2,7,6,1,5], 8))
 
 
 ####################################################
@@ -399,4 +400,9 @@ anagramStrings = ["eat","tea","tan","ate","nat","bat"]
 ### Test Minimum Move to Median Here
 # minmovemed = minmovemed.MinMoveToMedian()
 # print(minmovemed.minMoves2([1,2,3,4,5,6]))
+
+### Test Maximum Units on a Truck Here
+maxtruck = maxtruck.MaximumUnitsTruck()
+print(maxtruck.maximumUnits([[5,10],[2,5],[4,7],[3,9]], 10))
+
 
